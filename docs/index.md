@@ -1,6 +1,6 @@
 # v0.1.0
 
-## 1 Mapa
+## 1 MAPA
 
 Mapa składa się z następujących pól:
 
@@ -8,13 +8,12 @@ Mapa składa się z następujących pól:
 - Woda <div style="width: 20px; height: 20px; background-color: blue;"></div>
 - Skała <div style="width: 20px; height: 20px; background-color: grey;"></div>
 
-## 2 Ruch jednostek
+## 2 RUCH JEDNOSTKI
 
 ### 2.1 Wykonanie ruchu
 
 - Ruch może odbywać się jedynie na sąsiadujące pole, niemożliwy jest ruch po skosie.
 - Jednostka może poruszać się maksymalnie o tyle pól, ile wynosi jej **Ruch**.
-- Ruch jednostkami należy wykonywać po kolei, nie można jednocześnie poruszać się kilkoma jednostkami.
 
   Dozwolony ruch:
 
@@ -24,7 +23,7 @@ Mapa składa się z następujących pól:
 
   ![not_allowed_move.png](./assets/images/not_allowed_move.png)
 
-### 2.2 RUCH JEDNOSTEK LĄDOWYCH
+### 2.2 Ruch jednostki lądowej
 
 | Żeton     | Nazwa                                       | Możliwy ruch | Koszt |
 | --------- | ------------------------------------------- | ------------ | ----- |
@@ -41,16 +40,7 @@ Jednostki lądowe mogą poruszać się po następujących polach:
 - **Drabiny**
 - **Bramy** – mogą poruszać się tylko przez sojusznicze bramy (o kolorze gracza)
 
-  Po wykonanym ruchu można wykonać akcję jednostki i należy zaznaczyć, że dana jednostka jest już **wyczerpana** (wykonała już w tej turze posunięcie).
-
-### 2.3 RUCH JEDNOSTEK OBLĘŻNICZYCH I WODNYMI
-
-Warunki ruchu:
-
-- Ruch jednostki oblężniczej i wodnej, możliwy jest tylko w momencie, kiedy wewnątrz znajduje się chociaż **jedna niewyczerpana sojusznicza jednostka** i nie ma w niej **żadnej wrogiej jednostki**.
-- Po wykonanym ruchu można wykonać akcję jednostki oblężniczej i należy zaznaczyć **wszystkie jednostki** wewnątrz, jako **wyczerpane**.
-
-### 2.4 RUCH JEDNOSTEK OBLĘŻNICZYCH
+### 2.4 Ruch jednostki oblężniczej
 
 | Żeton   | Nazwa                                         | Możliwy ruch | Koszt |
 | ------- | --------------------------------------------- | ------------ | ----- |
@@ -77,7 +67,7 @@ Obrót:
 
 ![rotation_1_start.png](./assets/images/rotation_1_start.png) ![arrow.png](./assets/images/arrow.jpg){ width="100" } ![rotation_1_end_4.png](./assets/images/rotation_1_end_4.png)
 
-### 2.5 RUCH JEDNOSTKAMI WODNYMI
+### 2.5 Ruch jednostki wodnej
 
 | Żeton                                                | Nazwa  | Możliwy ruch | Koszt |
 | ---------------------------------------------------- | ------ | ------------ | ----- |
@@ -95,9 +85,9 @@ Obrót:
 
 ![rotation_2_start.png](./assets/images/rotation_2_start.png) ![arrow.png](./assets/images/arrow.jpg){ width="100" } ![rotation_2_end_2.png](./assets/images/rotation_2_end_2.png)
 
-## 3 AKCJA JEDNOSTEK
+## 3 AKCJA JEDNOSTKI
 
-### 3.1 AKCJA JEDNOSTEK LĄDOWYCH
+### 3.1 Akcja jednostki lądowej
 
 **Piechota** - w ramach akcji może zlikwidować sąsiednią, przeciwną jednostkę lądową.
 
@@ -105,46 +95,87 @@ Obrót:
 
 **Łucznicy** - w ramach akcji może spróbować zlikwidować przeciwną jednostkę lądową, która znajduje się w zasięgu.
 
-Warunki likwidacji wrogiej jednostki:
+- Przed strzałem należy zadeklarować w którą jednostkę strzelamy.
+- Jeśli jednostka znajduje się na **murze lub wieży**, a przeciwna jednostka nie, odległość liczona jest jak **o 1 mniejsza**.
+- Jeśli **przeciwna** jednostka znajduje się na **murze lub wieży**, a strzelec nie, odległość liczona jest jak **o 1 większa**.
+
+Warunki likwidacji wrogiej jednostki przez łuczników
 
 - Odległość przeciwnika **mniejsza/równa 2**
 - Wyrzucenie **5 lub 6 na kostce**
 
-Warunki strzału
+### 3.2 Akcja jednostki oblężniczej
 
-- Przed strzałem należy zadeklarować w którą jednostkę strzelamy.
-- Strzelec nie może strzelać do jednostki, jeśli między strzelcem a jednostką znajduje się mur.
-- Jeśli jednostka znajduje się na **murze lub wieży**, a przeciwna jednostka nie, odległość jest **o 1 mniejsza**.
-- Jeśli **przeciwna** jednostka znajduje się na **murze lub wieży**, a strzelec nie, odległość jest **o 1 większa**.
+**Wieża** – w ramach akcji pozwala wykonać akcję wszystkich, niewyczerpanych jednostek wewnątrz.
 
-### 3.2 AKCJA JEDNOSTEK OBLĘŻNICZYCH
+**Taran** – w ramach akcji może spróbować zniszczyć sąsiadujący **mur** lub inną **budowle**
 
-Warunki akcji jednostki oblężniczej:
+- Można próbować zniszczyć wszystkie budowle poza Zamkiem i obozem.
+- Po zniszczeniu budowli należy usunąć jej żeton, oraz ewentualnie wszystkich innych jednostek, które się na niej znajdowały.
 
-- Akcja jednostki oblężniczej, możliwa jest tylko w momencie, kiedy wewnątrz znajduje się chociaż **jedna niewyczerpana sojusznicza jednostka** i nie ma w niej **żadnej wrogiej jednostki**.
-- Po akcji, **wszystkie jednostki** wewnątrz, są oznaczane jako **wyczerpane**.
-
-  **Wieża** – nie posiada akcji
-
-  **Taran** – w ramach akcji może spróbować zniszczyć sąsiadujący **mur** lub inną **budowle**
+Warunki likwidacji wrogiej jednostki przez Taran
 
 - Aby zniszczyć **mur** należy wyrzucić **5 lub 6 na kostce**.
 - Aby zniszczyć **inna budowlę** należy wyrzucić **4, 5 lub 6 na kostce**.
-- Można próbować zniszczyć wszystkie budowle poza Zamkiem i obozem.
-- Po zniszczeniu budowli należy usunąć jej żeton, oraz ewentualnie wszystkich innych jednostek, które się na niej znajdowały.
 - Taran musi być skierowany poziomo do budowli, którą ma zniszczyć
 
 ![ram_example_1.png](./assets/images/ram_example_1.png)
 
 Trebusz – w ramach akcji może spróbować zniszczyć inną jednostkę, która jest w zasięgu.
 
+- Po zniszczeniu jednostki należy usunąć jej żeton, oraz ewentualnie wszystkich innych jednostek, które się na niej znajdowały.
+
+Warunki likwidacji wrogiej jednostki przez Trebusz
+
 - Trebusz musi być skierowany poziomo w stronę strzału.
 - Rzuty **4,5,6** trafiają cel, który znajduje się na danej kratce (Tak jak na rysunku poniżej), nawet jeśli jest to sojusznik.
-- Po zniszczeniu jednostki należy usunąć jej żeton, oraz ewentualnie wszystkich innych jednostek, które się na niej znajdowały.
 
 ![trebuche_example_1.png](./assets/images/trebuche_example_1.png)
 
-## 4 BUDYNKI
+## 4. TURA JEDNOSTKI
+
+### 4.2 Tura jednostki lądowej
+
+Warunki rozpoczęcia tury:
+
+- Jednostka lądowa jest niewyczerpana.
+
+Tura przebiega następująco:
+
+- Wybieramy jednostkę, której turę chcemy rozegrać.
+- Opcjonalnie, wykonujemy ruch jednostki.
+- Opcjonalnie, wykonujemy akcję jednostki.
+- Oznaczamy jednostkę jako wyczerpaną.
+
+### 4.3 Tura jednostki oblężniczej
+
+Warunki rozpoczęcia tury:
+
+- Wewnątrz przebywa przynajmniej jedna, niewyczerpana jednostka lądowa.
+- Wewnątrz nie znajduje się żadna wroga jednostka.
+
+Tura przebiega następująco:
+
+- Wybieramy jednostkę, której turę chcemy rozegrać.
+- Opcjonalnie, wykonujemy ruch jednostki. Powoduje to wyczerpanie jednej, dowolnej jednostki lądowej w środku.
+- Opcjonalnie, jeśli wewnątrz znajduje się niewyczerpana jednostka lądowa, wykonujemy akcję jednostki.
+- Wyczerpujemy wszystkie jednostki lądowe w środku.
+
+### 4.4 Tura jednostki wodnej
+
+Warunki rozpoczęcia tury:
+
+- Wewnątrz przebywa przynajmniej jedna, niewyczerpana jednostka lądowa.
+- Wewnątrz nie znajduje się żadna wroga jednostka.
+
+Tura przebiega następująco:
+
+- Wybieramy jednostkę, której turę chcemy rozegrać.
+- Opcjonalnie, wykonujemy ruch jednostki. Powoduje to wyczerpanie jednej, dowolnej jednostki lądowej w środku.
+- Opcjonalnie, możemy wykonać tury pozostałych jednostek, które znajdują się w środku.
+- Wyczerpujemy wszystkie jednostki lądowe w środku.
+
+## 5 BUDYNKI
 
 | Żeton    | Nazwa                                         | Koszt | Maksymalna odległość budowy |
 | -------- | --------------------------------------------- | ----- | --------------------------- |
@@ -157,7 +188,7 @@ Trebusz – w ramach akcji może spróbować zniszczyć inną jednostkę, która
 | Brama    | ![gate.png](./assets/images/gate.png)         | 4     | 10                          |
 | Drabina  | ![ladder.png](./assets/images/ladder.png)     | 1     | 10                          |
 
-### 4.1 ZAMEK
+### 5.1 Zamek
 
 W ramach **akcji** pozwala wybudować dowolny **budynek**, lub pozyskać **4 monety**.
 
@@ -167,7 +198,7 @@ W ramach **akcji** pozwala wybudować dowolny **budynek**, lub pozyskać **4 mon
 - Wszystkie budynki, można budować tylko i wyłącznie na **trawie**.
 - Aby port mógł spełniać swoją akcję, powinien on być wybudowany w sąsiedztwie wody. Warto, aby obóz również był w sąsiedztwie wody.
 
-### 4.2 KOSZARY
+### 5.2 Koszary
 
 W ramach akcji pozwalają stworzyć maksymalnie **2 jednostki lądowe**.
 
@@ -175,7 +206,7 @@ W ramach akcji pozwalają stworzyć maksymalnie **2 jednostki lądowe**.
 - Nowopowstałe jednostki muszą znajdować się **w sąsiedztwie** koszar.
 - Jednostkę można ustawić na tych polach na które może się ona normalnie ruszać.
 
-### 4.3 WARSZTAT
+### 5.3 Warsztat
 
 W ramach akcji pozwalają stworzyć maksymalnie **1 jednostkę oblężniczą**.
 
@@ -183,7 +214,7 @@ W ramach akcji pozwalają stworzyć maksymalnie **1 jednostkę oblężniczą**.
 - Nowopowstała jednostka musi znajdować się **w sąsiedztwie** warsztatu.
 - Jednostkę można ustawić na tych polach na które może się ona normalnie ruszać.
 
-### 4.4 PORT
+### 5.4 Port
 
 W ramach akcji pozwala stworzyć maksymalnie **1 jednostkę wodną**.
 
@@ -191,11 +222,11 @@ W ramach akcji pozwala stworzyć maksymalnie **1 jednostkę wodną**.
 - Nowopowstała jednostka musi znajdować się **w sąsiedztwie** portu.
 - Jednostkę można ustawić jedynie na wodzie.
 
-### 4.5 OBÓZ
+### 5.5 Obóz
 
 W ramach akcji pozwala wykonać jedną z akcji **koszar, warsztatu lub portu**.
 
-### 4.6 MUR, BRAMA I DRABINA
+### 5.6 Mur, brama I drabina
 
 Te budynki nie posiadają akcji.
 
@@ -204,23 +235,23 @@ Te budynki nie posiadają akcji.
 - Na mur można wejść jedynie z innego **muru, drabiny, bramy lub wieży oblężniczej**.
 - Przez bramę mogą przechodzić jedynie sojusznicze jednostki.
 
-## 5 PRZEJMOWANIE ZAMKU I OBOZU
+## 6 PRZEJMOWANIE ZAMKU I OBOZU
 
 Wrogie zamki i obozy można przejąć.
 
 - Aby przejąć wrogi zamek lub obóz, w ich sąsiedztwie muszą znajdować się przynajmniej **3 jednostki lądowe** osoby przejmującej i nie może znajdować się żadna jednostka lądowa właściciela zamku / obozu.
 - Po przejęciu zamku, wszystkie należące do niego budynki (poza obozem), należą teraz do gracza przejmującego i może z nich korzystać jak ze swoich.
 
-## 6 PRZYGOTOWANIE DO GRY
+## 7 PRZYGOTOWANIE DO GRY
 
-### 6.1 STANDARDOWY TRYB GRY
+### 7.1 Standardowy tryb gry
 
 1. Gracze otrzymują po 64 monety.
 2. Pierwszy gracz stawia zamek.
 3. Drugi gracz stawia zamek w odległości minimum 16 pól od wrogiego zamku.
 4. Drugi gracz rozpoczyna rozgrywkę turową.
 
-### 6.2 TRYB OBLĘŻENIA
+### 7.2 Tryb oblężniczy
 
 W tym trybie gry zamek zamiast swojej standardowej akcji, produkuje tylko **jedną monetę dziennie**.
 
@@ -232,25 +263,25 @@ Gracz atakujący musi jak najszybciej zdobyć zamek, ponieważ gracz broniący c
 4. Gracz atakujący stawia 2 darmowe obozy w odległości minimum 16 pól od wrogiego od zamku.
 5. Gracz atakujący rozpoczyna rozgrywkę turową.
 
-## 7 ROZGRYWKA TUROWA
+## 8 ROZGRYWKA TUROWA
 
 Każdy gracz w swojej turze wykonuje po kolei następujące akcje:
 
-- Ruch i akcja jednostek.
+- Wykonanie tur jednostek, tak aby je wszystkie wyczerpać.
 - Akcja budynków.
 
-## 8 WARUNKI WYGRANEJ
+## 9 WARUNKI WYGRANEJ
 
 Gracz wygrywa w jednym z przypadków:
 
 - Przeciwnik wykonał 3 tury, w których nie posiadał żadnego zamku ani obozu.
 - Przeciwnik po zakończeniu swojej tury nie posiada żadnej jednostki lądowej.
 
-## 9 SĄSIEDZTWO
+## 10 SĄSIEDZTWO
 
 Jednostki sąsiadują między sobą jedynie po bokach, natomiast budynki sąsiadują ze sobą również po skosie.
 
-### 9.1 PRZYKŁADY SĄSIEDZTWA
+### 10.1 Przykłady sąsiedztwa
 
 ![neighbourhood_1.png](./assets/images/neighbourhood_1.png)
 /// caption
@@ -277,9 +308,9 @@ Niepoprawnie wybudowane budynki.
 Niepoprawnie wybudowane budynki.
 ///
 
-### 9.2 PRZYKŁADY BRAKU SĄSIEDZTWA
+### 10.2 Przykłady braku sąsiedztwa
 
-![neighbourhood_1.png](./assets/images/neighbourhood_6.png)
+![neighbourhood_1.png](./assets/images/neighbourhood_7.png)
 /// caption
 Piechota nie może zaatakować strzelca.
 ///
@@ -294,6 +325,6 @@ Niepoprawne ustawienie jednostki / statku po wytworzeniu.
 Poprawnie wybudowane budynki.
 ///
 
-## 10 ODLEGŁOŚĆ MIĘDZY BUDYNKAMI I JEDNOSTKAMI
+## 11 ODLEGŁOŚĆ MIĘDZY BUDYNKAMI I JEDNOSTKAMI
 
 ![distance.png](./assets/images/distance.png)
