@@ -18,19 +18,19 @@ Mapa składa się z następujących pól:
 
   Dozwolony ruch:
 
-  ![allowed_move.png](/assets/images/allowed_move.png)
+  ![allowed_move.png](./assets/images/allowed_move.png)
 
   Niedozwolony ruch:
 
-  ![not_allowed_move.png](/assets/images/not_allowed_move.png)
+  ![not_allowed_move.png](./assets/images/not_allowed_move.png)
 
 ### 2.2 RUCH JEDNOSTEK LĄDOWYCH
 
-| Żeton     | Nazwa                                      | Możliwy ruch | Koszt |
-| --------- | ------------------------------------------ | ------------ | ----- |
-| Piechota  | ![knight.png](/assets/images/knight.png)   | 2            | 1     |
-| Strzelcy  | ![archer.png](/assets/images/archer.png)   | 2            | 1     |
-| Kawaleria | ![cavalry.png](/assets/images/cavalry.png) | 3            | 2     |
+| Żeton     | Nazwa                                       | Możliwy ruch | Koszt |
+| --------- | ------------------------------------------- | ------------ | ----- |
+| Piechota  | ![knight.png](./assets/images/knight.png)   | 2            | 1     |
+| Strzelcy  | ![archer.png](./assets/images/archer.png)   | 2            | 1     |
+| Kawaleria | ![cavalry.png](./assets/images/cavalry.png) | 3            | 2     |
 
 Jednostki lądowe mogą poruszać się po następujących polach:
 
@@ -52,11 +52,11 @@ Warunki ruchu:
 
 ### 2.4 RUCH JEDNOSTEK OBLĘŻNICZYCH
 
-| Żeton   | Nazwa                                        | Możliwy ruch | Koszt |
-| ------- | -------------------------------------------- | ------------ | ----- |
-| Wieża   | ![tower.png](/assets/images/tower.png)       | 1            | 4     |
-| Taran   | ![ram.png](/assets/images/ram.png)           | 1            | 4     |
-| Trebusz | ![trebuche.png](/assets/images/trebuche.png) | 1            | 4     |
+| Żeton   | Nazwa                                         | Możliwy ruch | Koszt |
+| ------- | --------------------------------------------- | ------------ | ----- |
+| Wieża   | ![tower.png](./assets/images/tower.png)       | 1            | 4     |
+| Taran   | ![ram.png](./assets/images/ram.png)           | 1            | 4     |
+| Trebusz | ![trebuche.png](./assets/images/trebuche.png) | 1            | 4     |
 
 Jednostki oblężnicze mogą poruszać się po następujących polach:
 
@@ -69,19 +69,19 @@ Obrót:
 - Zamiast ruchu można dokonać obrotu.
 - Dozwolone są następujące kombinacje obrotu:
 
-![rotation_1_start.png](/assets/images/rotation_1_start.png) ![arrow.png](/assets/images/arrow.jpg){ width="100" } ![rotation_1_end_1.png](/assets/images/rotation_1_end_1.png)
+![rotation_1_start.png](./assets/images/rotation_1_start.png) ![arrow.png](./assets/images/arrow.jpg){ width="100" } ![rotation_1_end_1.png](./assets/images/rotation_1_end_1.png)
 
-![rotation_1_start.png](/assets/images/rotation_1_start.png) ![arrow.png](/assets/images/arrow.jpg){ width="100" } ![rotation_1_end_2.png](/assets/images/rotation_1_end_2.png)
+![rotation_1_start.png](./assets/images/rotation_1_start.png) ![arrow.png](./assets/images/arrow.jpg){ width="100" } ![rotation_1_end_2.png](./assets/images/rotation_1_end_2.png)
 
-![rotation_1_start.png](/assets/images/rotation_1_start.png) ![arrow.png](/assets/images/arrow.jpg){ width="100" } ![rotation_1_end_3.png](/assets/images/rotation_1_end_3.png)
+![rotation_1_start.png](./assets/images/rotation_1_start.png) ![arrow.png](./assets/images/arrow.jpg){ width="100" } ![rotation_1_end_3.png](./assets/images/rotation_1_end_3.png)
 
-![rotation_1_start.png](/assets/images/rotation_1_start.png) ![arrow.png](/assets/images/arrow.jpg){ width="100" } ![rotation_1_end_4.png](/assets/images/rotation_1_end_4.png)
+![rotation_1_start.png](./assets/images/rotation_1_start.png) ![arrow.png](./assets/images/arrow.jpg){ width="100" } ![rotation_1_end_4.png](./assets/images/rotation_1_end_4.png)
 
 ### 2.5 RUCH JEDNOSTKAMI WODNYMI
 
-| Żeton                                               | Nazwa  | Możliwy ruch | Koszt |
-| --------------------------------------------------- | ------ | ------------ | ----- |
-| ![ship.png](/assets/images/ship.png){ width="220" } | Statek | 3            | 4     |
+| Żeton                                                | Nazwa  | Możliwy ruch | Koszt |
+| ---------------------------------------------------- | ------ | ------------ | ----- |
+| ![ship.png](./assets/images/ship.png){ width="220" } | Statek | 3            | 4     |
 
 - Jednostki wodne mogą poruszać się jedynie po wodzie
 - Ruch jednostki wodnej jest niemożliwy, jeśli jakaś jednostka oblężnicza znajduje się na niej nie w pełni
@@ -91,9 +91,9 @@ Obrót:
 - Zamiast ruchu można dokonać obrotu.
 - Dozwolone są następujące kombinacje obrotu:
 
-![rotation_2_start.png](/assets/images/rotation_2_start.png) ![arrow.png](/assets/images/arrow.jpg){ width="100" } ![rotation_2_end_1.png](/assets/images/rotation_2_end_1.png)
+![rotation_2_start.png](./assets/images/rotation_2_start.png) ![arrow.png](./assets/images/arrow.jpg){ width="100" } ![rotation_2_end_1.png](./assets/images/rotation_2_end_1.png)
 
-![rotation_2_start.png](/assets/images/rotation_2_start.png) ![arrow.png](/assets/images/arrow.jpg){ width="100" } ![rotation_2_end_2.png](/assets/images/rotation_2_end_2.png)
+![rotation_2_start.png](./assets/images/rotation_2_start.png) ![arrow.png](./assets/images/arrow.jpg){ width="100" } ![rotation_2_end_2.png](./assets/images/rotation_2_end_2.png)
 
 ## 3 AKCJA JEDNOSTEK
 
@@ -134,7 +134,7 @@ Warunki akcji jednostki oblężniczej:
 - Po zniszczeniu budowli należy usunąć jej żeton, oraz ewentualnie wszystkich innych jednostek, które się na niej znajdowały.
 - Taran musi być skierowany poziomo do budowli, którą ma zniszczyć
 
-![ram_example_1.png](/assets/images/ram_example_1.png)
+![ram_example_1.png](./assets/images/ram_example_1.png)
 
 Trebusz – w ramach akcji może spróbować zniszczyć inną jednostkę, która jest w zasięgu.
 
@@ -142,20 +142,20 @@ Trebusz – w ramach akcji może spróbować zniszczyć inną jednostkę, która
 - Rzuty **4,5,6** trafiają cel, który znajduje się na danej kratce (Tak jak na rysunku poniżej), nawet jeśli jest to sojusznik.
 - Po zniszczeniu jednostki należy usunąć jej żeton, oraz ewentualnie wszystkich innych jednostek, które się na niej znajdowały.
 
-![trebuche_example_1.png](/assets/images/trebuche_example_1.png)
+![trebuche_example_1.png](./assets/images/trebuche_example_1.png)
 
 ## 4 BUDYNKI
 
-| Żeton    | Nazwa                                        | Koszt | Maksymalna odległość budowy |
-| -------- | -------------------------------------------- | ----- | --------------------------- |
-| Zamek    | ![castle.png](/assets/images/castle.png)     | -     | -                           |
-| Koszary  | ![barracks.png](/assets/images/barracks.png) | 8     | 5                           |
-| Warsztat | ![workshop.png](/assets/images/workshop.png) | 8     | 5                           |
-| Port     | ![port.png](/assets/images/port.png)         | 8     | 5                           |
-| Obóz     | ![camp.png](/assets/images/camp.png)         | 32    | 20                          |
-| Mur      | ![walls.png](/assets/images/walls.png)       | 4     | 10                          |
-| Brama    | ![gate.png](/assets/images/gate.png)         | 4     | 10                          |
-| Drabina  | ![ladder.png](/assets/images/ladder.png)     | 1     | 10                          |
+| Żeton    | Nazwa                                         | Koszt | Maksymalna odległość budowy |
+| -------- | --------------------------------------------- | ----- | --------------------------- |
+| Zamek    | ![castle.png](./assets/images/castle.png)     | -     | -                           |
+| Koszary  | ![barracks.png](./assets/images/barracks.png) | 8     | 5                           |
+| Warsztat | ![workshop.png](./assets/images/workshop.png) | 8     | 5                           |
+| Port     | ![port.png](./assets/images/port.png)         | 8     | 5                           |
+| Obóz     | ![camp.png](./assets/images/camp.png)         | 32    | 20                          |
+| Mur      | ![walls.png](./assets/images/walls.png)       | 4     | 10                          |
+| Brama    | ![gate.png](./assets/images/gate.png)         | 4     | 10                          |
+| Drabina  | ![ladder.png](./assets/images/ladder.png)     | 1     | 10                          |
 
 ### 4.1 ZAMEK
 
@@ -252,48 +252,48 @@ Jednostki sąsiadują między sobą jedynie po bokach, natomiast budynki sąsiad
 
 ### 9.1 PRZYKŁADY SĄSIEDZTWA
 
-![neighbourhood_1.png](/assets/images/neighbourhood_1.png)
+![neighbourhood_1.png](./assets/images/neighbourhood_1.png)
 /// caption
 Piechota może zaatakować strzelców.
 ///
 
-![neighbourhood_1.png](/assets/images/neighbourhood_2.png)
+![neighbourhood_1.png](./assets/images/neighbourhood_2.png)
 /// caption
 Poprawne ustawienie jednostki po wytworzeniu.
 ///
 
-![neighbourhood_1.png](/assets/images/neighbourhood_3.png)
+![neighbourhood_1.png](./assets/images/neighbourhood_3.png)
 /// caption
 Poprawne ustawienie statku po wytworzeniu.
 ///
 
-![neighbourhood_1.png](/assets/images/neighbourhood_4.png)
+![neighbourhood_1.png](./assets/images/neighbourhood_4.png)
 /// caption
 Niepoprawnie wybudowane budynki.
 ///
 
-![neighbourhood_1.png](/assets/images/neighbourhood_5.png)
+![neighbourhood_1.png](./assets/images/neighbourhood_5.png)
 /// caption
 Niepoprawnie wybudowane budynki.
 ///
 
 ### 9.2 PRZYKŁADY BRAKU SĄSIEDZTWA
 
-![neighbourhood_1.png](/assets/images/neighbourhood_6.png)
+![neighbourhood_1.png](./assets/images/neighbourhood_6.png)
 /// caption
 Piechota nie może zaatakować strzelca.
 ///
 
-![neighbourhood_1.png](/assets/images/neighbourhood_7.png)
+![neighbourhood_1.png](./assets/images/neighbourhood_7.png)
 /// caption
 Niepoprawne ustawienie jednostki / statku po wytworzeniu.
 ///
 
-![neighbourhood_1.png](/assets/images/neighbourhood_8.png)
+![neighbourhood_1.png](./assets/images/neighbourhood_8.png)
 /// caption
 Poprawnie wybudowane budynki.
 ///
 
 ## 10 ODLEGŁOŚĆ MIĘDZY BUDYNKAMI I JEDNOSTKAMI
 
-![distance.png](/assets/images/distance.png)
+![distance.png](./assets/images/distance.png)
