@@ -1,0 +1,16 @@
+site_name: Zasady gry wojna
+docs_dir: docs
+plugins:
+  - macros
+  - search
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  features:
+    - navigation.expand
+    - toc.integrate
+markdown_extensions:
+  - tables
+  - attr_list
+  - pymdownx.blocks.caption
