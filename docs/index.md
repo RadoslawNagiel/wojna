@@ -1,4 +1,4 @@
-# v0.1.0
+# v0.1.1
 
 ## 1. MAPA
 
@@ -10,7 +10,7 @@ Mapa składa się z następujących pól:
 
 ## 2. RUCH JEDNOSTKI
 
-### 2.1 Wykonanie ruchu
+### 2.1. Wykonanie ruchu
 
 - Ruch może odbywać się jedynie na sąsiadujące pole, niemożliwy jest ruch po skosie.
 - Jednostka może poruszać się maksymalnie o tyle pól, ile wynosi jej **Ruch**.
@@ -23,12 +23,12 @@ Mapa składa się z następujących pól:
 
   ![not_allowed_move.png](./assets/images/not_allowed_move.png)
 
-### 2.2 Ruch jednostki lądowej
+### 2.2. Ruch jednostki lądowej
 
 | Żeton                                       | Nazwa     | Możliwy ruch | Koszt |
 | ------------------------------------------- | --------- | ------------ | ----- |
 | ![knight.png](./assets/images/knight.png)   | Piechota  | 2            | 1     |
-| ![archer.png](./assets/images/archer.png)   | Strzelcy  | 2            | 1     |
+| ![archer.png](./assets/images/archer.png)   | Łucznicy  | 2            | 1     |
 | ![cavalry.png](./assets/images/cavalry.png) | Kawaleria | 3            | 2     |
 
 Jednostki lądowe mogą poruszać się po następujących polach:
@@ -40,7 +40,7 @@ Jednostki lądowe mogą poruszać się po następujących polach:
 - **Drabiny**
 - **Bramy** – mogą poruszać się tylko przez sojusznicze bramy (o kolorze gracza)
 
-### 2.3 Ruch jednostki oblężniczej
+### 2.3. Ruch jednostki oblężniczej
 
 | Żeton                                           | Nazwa   | Możliwy ruch | Koszt |
 | ----------------------------------------------- | ------- | ------------ | ----- |
@@ -67,7 +67,7 @@ Obrót:
 
 ![rotation_1_start.png](./assets/images/rotation_1_start.png) ![arrow.jpg](./assets/images/arrow.jpg){ width="100" } ![rotation_1_end_4.png](./assets/images/rotation_1_end_4.png)
 
-### 2.4 Ruch jednostki wodnej
+### 2.4. Ruch jednostki wodnej
 
 | Żeton                                                | Nazwa  | Możliwy ruch | Koszt |
 | ---------------------------------------------------- | ------ | ------------ | ----- |
@@ -87,7 +87,7 @@ Obrót:
 
 ## 3. AKCJA JEDNOSTKI
 
-### 3.1 Akcja jednostki lądowej
+### 3.1. Akcja jednostki lądowej
 
 **Piechota** - w ramach akcji może zlikwidować sąsiednią, przeciwną jednostkę lądową.
 
@@ -104,20 +104,20 @@ Warunki likwidacji wrogiej jednostki przez łuczników:
 - Odległość przeciwnika **mniejsza/równa 2**
 - Wyrzucenie **5 lub 6 na kostce**
 
-### 3.2 Akcja jednostki oblężniczej
+### 3.2. Akcja jednostki oblężniczej
 
 **Wieża** – w ramach akcji pozwala wykonać akcję wszystkich, niewyczerpanych jednostek wewnątrz.
 
-**Taran** – w ramach akcji może spróbować zniszczyć sąsiadujący **mur** lub inną **budowlę**:
+**Taran** – w ramach akcji może spróbować zniszczyć sąsiadujący **mur** lub inny **budynek**:
 
-- Można próbować zniszczyć wszystkie budowle poza Zamkiem i Obozem.
-- Po zniszczeniu budowli należy usunąć jej żeton oraz ewentualnie żetony wszystkich innych jednostek, które się na niej znajdowały.
+- Można próbować zniszczyć wszystkie budynki poza Zamkiem i Obozem.
+- Po zniszczeniu budynku należy usunąć jej żeton oraz ewentualnie żetony wszystkich innych jednostek, które się na niej znajdowały.
 
 Warunki likwidacji wrogiej jednostki przez Taran:
 
 - Aby zniszczyć **mur** należy wyrzucić **5 lub 6 na kostce**.
-- Aby zniszczyć **inna budowlę** należy wyrzucić **4, 5 lub 6 na kostce**.
-- Taran musi być skierowany poziomo do budowli, którą ma zniszczyć
+- Aby zniszczyć **inny budynek** należy wyrzucić **4, 5 lub 6 na kostce**.
+- Taran musi być skierowany poziomo do budynku, którą ma zniszczyć
 
 ![ram_example_1.png](./assets/images/ram_example_1.png)
 
@@ -134,7 +134,7 @@ Warunki likwidacji wrogiej jednostki przez Trebusz
 
 ## 4. TURA JEDNOSTKI
 
-### 4.1 Tura jednostki lądowej
+### 4.1. Tura jednostki lądowej
 
 Warunki rozpoczęcia tury:
 
@@ -147,7 +147,7 @@ Tura przebiega następująco:
 - Opcjonalnie, wykonujemy akcję jednostki.
 - Oznaczamy jednostkę jako wyczerpaną.
 
-### 4.2 Tura jednostki oblężniczej
+### 4.2. Tura jednostki oblężniczej
 
 Warunki rozpoczęcia tury:
 
@@ -161,7 +161,7 @@ Tura przebiega następująco:
 - Opcjonalnie, jeśli wewnątrz znajduje się niewyczerpana jednostka lądowa, wykonujemy akcję jednostki.
 - Wyczerpujemy wszystkie jednostki lądowe w środku.
 
-### 4.3 Tura jednostki wodnej
+### 4.3. Tura jednostki wodnej
 
 Warunki rozpoczęcia tury:
 
@@ -188,25 +188,26 @@ Tura przebiega następująco:
 | ![gate.png](./assets/images/gate.png)         | Brama    | 4     | 10                          |
 | ![ladder.png](./assets/images/ladder.png)     | Drabina  | 1     | 10                          |
 
-### 5.1 Zamek
+### 5.1. Zamek
 
 W ramach **akcji** pozwala wybudować dowolny **budynek** lub pozyskać **4 monety**.
 
 - Aby wybudować budynek, należy zapłacić jego **koszt**.
-- Nowo wybudowana budowla, musi spełniać zasadę **maksymalnej odległości** od zamku.
+- Nowo wybudowany budynek, musi spełniać zasadę **maksymalnej odległości** od zamku.
 - Nie ma możliwości wybudowania nowego zamku.
 - Wszystkie budynki można budować tylko i wyłącznie na **trawie**.
 - Aby port mógł spełniać swoją akcję, powinien on być wybudowany w sąsiedztwie wody. Warto, aby obóz również był w sąsiedztwie wody.
 
-### 5.2 Koszary
+### 5.2. Koszary
 
 W ramach akcji pozwalają stworzyć maksymalnie **2 jednostki lądowe**.
 
-- Aby stworzyć jednostki, należy zapłacić ich **koszt**.
-- Nowo powstałe jednostki muszą znajdować się **w sąsiedztwie** koszar.
+- Aby stworzyć jednostkę, należy zapłacić jej **koszt**.
+- Nowo powstała jednostka musi znajdować się **w sąsiedztwie** koszar.
 - Jednostkę można ustawić na tych polach, na które może się ona normalnie ruszać.
+- Jednostkę należy oznaczyć jako wyczerpaną.
 
-### 5.3 Warsztat
+### 5.3. Warsztat
 
 W ramach akcji pozwala stworzyć maksymalnie **1 jednostkę oblężniczą**.
 
@@ -214,7 +215,7 @@ W ramach akcji pozwala stworzyć maksymalnie **1 jednostkę oblężniczą**.
 - Nowo powstała jednostka musi znajdować się **w sąsiedztwie** warsztatu.
 - Jednostkę można ustawić na tych polach, na które może się ona normalnie ruszać.
 
-### 5.4 Port
+### 5.4. Port
 
 W ramach akcji pozwala stworzyć maksymalnie **1 jednostkę wodną**.
 
@@ -222,16 +223,16 @@ W ramach akcji pozwala stworzyć maksymalnie **1 jednostkę wodną**.
 - Nowo powstała jednostka musi znajdować się **w sąsiedztwie** portu.
 - Jednostkę można ustawić jedynie na wodzie.
 
-### 5.5 Obóz
+### 5.5. Obóz
 
 W ramach akcji pozwala wykonać jedną z akcji **koszar, warsztatu lub portu**.
 
-### 5.6 Mur, brama i drabina
+### 5.6. Mur, brama i drabina
 
 Te budynki nie posiadają akcji.
 
 - Mur oraz brama, blokują możliwość przejścia wrogich jednostek.
-- Mur (tak jak wieża oblężnicza) daje przewagę strzelcom, którzy się na nim znajdują.
+- Mur (tak jak wieża oblężnicza) daje przewagę łucznikom, którzy się na nim znajdują.
 - Na mur można wejść jedynie z innego **muru, drabiny, bramy lub wieży oblężniczej**.
 - Przez bramę mogą przechodzić jedynie sojusznicze jednostki.
 
@@ -244,14 +245,14 @@ Wrogie zamki i obozy można przejąć.
 
 ## 7. PRZYGOTOWANIE DO GRY
 
-### 7.1 Standardowy tryb gry
+### 7.1. Standardowy tryb gry
 
 1. Gracze otrzymują po 64 monety.
 2. Pierwszy gracz stawia zamek.
 3. Drugi gracz stawia zamek w odległości minimum 16 pól od wrogiego zamku.
 4. Drugi gracz rozpoczyna rozgrywkę turową.
 
-### 7.2 Tryb oblężniczy
+### 7.2. Tryb oblężniczy
 
 W tym trybie gry zamek zamiast swojej standardowej akcji, produkuje tylko **jedną monetę dziennie**.
 
@@ -281,11 +282,11 @@ Gracz wygrywa w jednym z przypadków:
 
 Jednostki sąsiadują między sobą jedynie po bokach, natomiast budynki sąsiadują ze sobą również po skosie.
 
-### 10.1 Przykłady sąsiedztwa
+### 10.1. Przykłady sąsiedztwa
 
 ![neighbourhood_1.png](./assets/images/neighbourhood_1.png)
 /// caption
-Piechota może zaatakować strzelców.
+Piechota może zaatakować łuczników.
 ///
 
 ![neighbourhood_2.png](./assets/images/neighbourhood_2.png)
@@ -308,11 +309,11 @@ Niepoprawnie wybudowane budynki.
 Niepoprawnie wybudowane budynki.
 ///
 
-### 10.2 Przykłady braku sąsiedztwa
+### 10.2. Przykłady braku sąsiedztwa
 
 ![neighbourhood_6.png](./assets/images/neighbourhood_6.png)
 /// caption
-Piechota nie może zaatakować strzelców.
+Piechota nie może zaatakować łuczników.
 ///
 
 ![neighbourhood_7.png](./assets/images/neighbourhood_7.png)
